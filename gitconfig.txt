@@ -1,0 +1,32 @@
+git config --global user.name RRB-Rafael
+git config --global user.email rafael.bastos9928@gmail.com
+
+npx create-expo-app@latest EtecBus --template blank
+
+cd EtecBus 
+
+npx expo install expo-location react-native-webview
+
+npx expo start --tunnel --android
+
+----
+Config Firebase
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBlBcSWbUMFD5ejD70HR5pdl0BP650yeiM",
+  authDomain: "tictactoe-realtime-3892d.firebaseapp.com",
+  databaseURL: "https://tictactoe-realtime-3892d-default-rtdb.firebaseio.com",
+  projectId: "tictactoe-realtime-3892d",
+  storageBucket: "tictactoe-realtime-3892d.firebasestorage.app",
+  messagingSenderId: "71927484454",
+  appId: "1:71927484454:web:b68b5ae6d4ce7b994e96e7"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
